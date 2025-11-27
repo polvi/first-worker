@@ -1,16 +1,15 @@
 {
 	"name": "first-worker",
-	"version": "0.0.0",
+	"version": "0.0.1",
 	"private": true,
 	"scripts": {
 		"deploy": "wrangler deploy",
-	    "build": "esbuild src/index.ts --bundle --platform=neutral --format=esm --target=es2022 --sourcemap --outfile=dist/index.js --banner:js='// SPDX-FileCopyrightText: 2025 Alex Polvi\n// SPDX-License-Identifier: AGPL-3.0-or-later'",
+		"build": "esbuild src/index.ts --bundle --platform=neutral --format=esm --target=es2022 --sourcemap --outfile=dist/index.js --banner:js='// SPDX-FileCopyrightText: 2025 Alex Polvi\n// SPDX-License-Identifier: AGPL-3.0-or-later'",
 		"dev": "wrangler dev",
 		"start": "wrangler dev",
 		"test": "vitest",
 		"release": "npm version patch && git push && git push --tags",
 		"cf-typegen": "wrangler types"
-
 	},
 	"devDependencies": {
 		"@cloudflare/vitest-pool-workers": "^0.8.19",
