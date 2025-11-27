@@ -4,7 +4,7 @@
 	"private": true,
 	"scripts": {
 		"deploy": "wrangler deploy",
-		"build": "esbuild src/index.ts --bundle --format=esm --target=es2022 --sourcemap --outfile=dist/index.js --banner:js='// SPDX-FileCopyrightText: 2025 Alex Polvi\n// SPDX-License-Identifier: AGPL-3.0-or-later' --main-fields=module,main",
+		"build": "esbuild src/index.ts --bundle --format=esm --target=es2022 --sourcemap --outfile=dist/index.js --banner:js='// SPDX-FileCopyrightText: 2025 Alex Polvi\n// SPDX-License-Identifier: AGPL-3.0-or-later' --external:cloudflare:*",
 		"dev": "wrangler dev",
 		"start": "wrangler dev",
 		"test": "vitest",
