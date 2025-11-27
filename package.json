@@ -8,7 +8,9 @@
 		"dev": "wrangler dev",
 		"start": "wrangler dev",
 		"test": "vitest",
+		"release": "npm version patch && git push && git push --tags",
 		"cf-typegen": "wrangler types"
+
 	},
 	"devDependencies": {
 		"@cloudflare/vitest-pool-workers": "^0.8.19",
