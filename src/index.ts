@@ -13,6 +13,6 @@
 
 export default {
 	async fetch(request, env, ctx): Promise<Response> {
-		return new Response('Hello Branch 3!');
+		return new Response('Hello Branch 3.1!');
 	},
 } satisfies ExportedHandler<Env>;
